@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anandamirtharaj D | SDE, AI & Cloud Engineer Portfolio</title>
+  <meta name="description" content="Personal portfolio of Anandamirtharaj D, Computer Science student, Software Engineer, AI Specialist, and Cloud Engineer. View education, experience, services, and projects.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Theme Background Blobs -->
+  <div class="bg-blob blob-primary"></div>
+  <div class="bg-blob blob-accent"></div>
+  <div class="bg-blob blob-secondary"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        Anand
+      </a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Project</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Light/Dark Mode Switcher -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.88rem;">Let's Talk</a>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-wrapper">
+      <div class="hero-content">
+        <span class="hero-greeting">👋 Welcome to my portfolio</span>
+        <h1 class="hero-title">Hello, I'm <br><span>Anandamirtharaj D</span></h1>
+        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1.5rem;">
+          Software Developer
+        </div>
+        <p class="hero-desc">
+          Computer Science undergraduate passionate about building intelligent systems and deploying scalable cloud infrastructures. I specialize in backend development, AI agent integration, cloud automation, and data analytics.
+        </p>
+        
+        <div class="hero-ctas" style="display: flex; align-items: center; gap: 1.2rem;">
+          <a href="assets/resume.pdf" download="Anandamirtharaj_D_Resume.pdf" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Resume
+          </a>
+          
+          <a href="https://github.com/anandamirtharaj" target="_blank" class="hero-social-icon-btn" title="GitHub Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          
+          <a href="https://leetcode.com/anandamirtharaj" target="_blank" class="hero-social-icon-btn" title="LeetCode Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-blob-bg"></div>
+        <div class="avatar-frame">
+          <img src="assets/user_picture.jpg" alt="Anandamirtharaj D" class="avatar-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies Section -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Core Competencies</h2>
+      </div>
+
+      <div class="skills-graph-container" id="skills-graph-container">
+        <!-- Floating bubbles controlled by JS physics -->
+        <div class="skill-node" data-color="#2563EB" data-label="saas" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #2563EB; font-weight: 700; font-family: var(--font-heading);">SaaS<br>Development</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">CORE</div>
+        </div>
+        <div class="skill-node" data-color="#0D9488" data-label="web" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #0D9488; font-weight: 700; font-family: var(--font-heading);">Web<br>Development</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">PROGRAMMING</div>
+        </div>
+        <div class="skill-node" data-color="#F89820" data-label="java" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #F89820; font-weight: 700; font-family: var(--font-heading);">Java<br>Programming</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">PROGRAMMING</div>
+        </div>
+        <div class="skill-node" data-color="#059669" data-label="genai" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #059669; font-weight: 700; font-family: var(--font-heading);">Generative AI</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">AI</div>
+        </div>
+        <div class="skill-node" data-color="#7C3AED" data-label="prompt" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #7C3AED; font-weight: 700; font-family: var(--font-heading);">Prompt<br>Engineering</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">AI</div>
+        </div>
+        <div class="skill-node" data-color="#00758F" data-label="mysql" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #00758F; font-weight: 700; font-family: var(--font-heading);">MySQL</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">DATABASE</div>
+        </div>
+        <div class="skill-node" data-color="#9333EA" data-label="cloud" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #9333EA; font-weight: 700; font-family: var(--font-heading);">Cloud &<br>Hosting</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">CLOUD</div>
+        </div>
+        <div class="skill-node" data-color="#C026D3" data-label="git" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #C026D3; font-weight: 700; font-family: var(--font-heading);">Git & GitHub</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">TOOLS</div>
+        </div>
+        <div class="skill-node" data-color="#008FD3" data-label="saperp" style="background-color: var(--surface-color); border: 1px solid var(--border-color);">
+          <div class="skill-node-text" style="color: #008FD3; font-weight: 700; font-family: var(--font-heading);">SAP ERP</div>
+          <div class="skill-node-subtext" style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">BUSINESS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content centered-about">
+        <span class="section-tag">About Me</span>
+        <p class="about-bio" style="max-width: 850px; margin: 0 0 2rem 0; text-align: left; line-height: 1.7; font-size: 1.05rem;">
+          I am an aspiring Software Developer based in Coimbatore, India, specialized in building full-stack applications. My expertise includes integrating advanced AI technologies (such as Generative AI and Prompt Engineering), designing robust enterprise ERP workflows, setting up automated cloud pipelines, and managing relational and non-relational database ecosystems. I am committed to writing clean, maintainable code that bridges the gap between modern software systems and smart business infrastructure.
+        </p>
+
+        <!-- Education & Certifications Side-by-Side -->
+        <div class="edu-cert-columns">
+          <!-- Left Column: Education -->
+          <div class="edu-column">
+            <h3 class="column-title">🎓 Education</h3>
+            <div class="edu-list">
+              <div class="edu-card">
+                <span class="edu-date">2023 - 2027</span>
+                <h4>B.E. Computer Science and Engineering</h4>
+                <p class="edu-inst">V.S.B. College of Engineering Technical Campus</p>
+                <p class="edu-score">CGPA: 8.38</p>
+              </div>
+              <div class="edu-card">
+                <span class="edu-date">2022 - 2023</span>
+                <h4>Higher Secondary Education (ISC)</h4>
+                <p class="edu-inst">Holy Innocents School & Junior College, Ooty</p>
+                <p class="edu-score">Percentage: 73.75%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Certifications -->
+          <div class="cert-column">
+            <h3 class="column-title">🏆 Certifications</h3>
+            <div class="cert-list-simple">
+              <!-- Infosys Java -->
+              <a href="https://springboard.infosys.com/" target="_blank" class="cert-card-simple">
+                <div class="cert-card-simple-icon">☕</div>
+                <div class="cert-card-simple-content">
+                  <h4>Java for Beginners</h4>
+                  <p>Infosys Springboard Certification</p>
+                </div>
+              </a>
+              <!-- HackerRank SQL -->
+              <a href="https://www.hackerrank.com/certificates/verify" target="_blank" class="cert-card-simple">
+                <div class="cert-card-simple-icon">📊</div>
+                <div class="cert-card-simple-content">
+                  <h4>SQL Certification</h4>
+                  <p>HackerRank Certified Developer</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Working Process Section -->
+  <section class="process" id="process" style="background-color: var(--surface-muted);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">How I Work</span>
+        <h2 class="section-title">My Working Process</h2>
+        <p class="section-desc">A structured engineering methodology ensures fast, optimal, and high-quality deliveries.</p>
+      </div>
+
+      <div class="process-steps">
+        <!-- SVG connector line -->
+        <svg class="process-connector" width="600" height="30" viewBox="0 0 600 30">
+          <path d="M 50,15 C 150,5 200,25 300,15 C 400,5 450,25 550,15" class="connector-line"></path>
+        </svg>
+
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            📝
+            <span class="step-number">01</span>
+          </div>
+          <h3>Plan & Design</h3>
+          <p>Reviewing requirements, planning database architectures, and modeling endpoints before writing code.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            ⚙️
+            <span class="step-number">02</span>
+          </div>
+          <h3>Build & Integrate</h3>
+          <p>Writing clean backend APIs, connecting frontends, and integrating artificial intelligence engines.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-icon-wrapper">
+            🚀
+            <span class="step-number">03</span>
+          </div>
+          <h3>Deploy & Verify</h3>
+          <p>Performing security code scans, testing interfaces, and pushing clean, working bundles to the cloud.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">My Timeline</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-desc">Gaining industry-level competencies through software and security internships.</p>
+      </div>
+
+      <div class="experience-list-simple">
+        <!-- Internship 1 -->
+        <div class="experience-item-simple">
+          <div class="exp-header">
+            <div>
+              <h3>Software Development Intern</h3>
+              <div class="exp-company">Roots Industries India Pvt. Ltd.</div>
+            </div>
+            <span class="exp-date">June 2025 - July 2025</span>
+          </div>
+          <ul class="exp-details">
+            <li>Worked alongside ERP teams on backend enterprise workflows and database triggers.</li>
+            <li>Created business reports and automated data pipelines using enterprise systems.</li>
+            <li>Collaborated on analytical processes for Finance and IT departments.</li>
+          </ul>
+        </div>
+
+        <!-- Internship 2 -->
+        <div class="experience-item-simple">
+          <div class="exp-header">
+            <div>
+              <h3>Cyber Threat Analysis Intern</h3>
+              <div class="exp-company">Prompt Infotech</div>
+            </div>
+            <span class="exp-date">August 2024</span>
+          </div>
+          <ul class="exp-details">
+            <li>Conducted assessments on system exploits, host threats, and network vulnerabilities.</li>
+            <li>Investigated phishing payloads and reported infrastructure risks.</li>
+            <li>Generated security assessment documentation for defense configurations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects" style="background-color: var(--surface-muted);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Featured Project</span>
+        <h2 class="section-title">My Project</h2>
+        <p class="section-desc">Design and implementation of custom intelligent tools.</p>
+      </div>
+
+      <div class="project-single-container" style="max-width: 820px; margin: 0 auto;">
+        <div class="project-card-premium">
+          <div class="project-card-image-col">
+            <img src="assets/project_theme.jpg" alt="AI Resume Analyzer Theme" class="project-theme-img">
+          </div>
+          <div class="project-card-content-col">
+            <div class="project-card-header">
+              <div class="project-card-meta">
+                <span class="project-tech-badge">TypeScript</span>
+                <span class="project-tech-badge">FastAPI</span>
+                <span class="project-tech-badge">GROQ AI API</span>
+              </div>
+              <div class="project-card-icon">🤖</div>
+            </div>
+            <div class="project-card-body">
+              <h3>AI Resume Analyzer</h3>
+              <p>An advanced intelligent platform designed to analyze resume PDFs. Evaluates industry-specific content quality, measures ATS compatibility, identifies critical formatting gaps, and provides context-aware keyword recommendations using semantic LLM parsing.</p>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://anand-ai.netlify.app/" target="_blank" class="btn btn-primary">
+                Launch Live App
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Banner -->
+  <section class="container" style="padding: 0;">
+    <div class="contact-banner centered-banner" id="contact-banner">
+      <div class="banner-content text-center" style="max-width: 700px; margin: 0 auto;">
+        <h2>Got an exciting project?<br>Let's collaborate!</h2>
+        <p>I am actively seeking software engineering internships, AI engineering positions, or cloud deployment projects. Connect with me today.</p>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Contact Details -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <h2 class="footer-logo">Anand</h2>
+          <p class="footer-desc">Software Developer | Building scalable backend infrastructures, prompt-engineered AI applications, and secure cloud pipelines.</p>
+          
+          <div class="footer-contact-details">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>anandamirtharaj.vsb@gmail.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>+91 90037 60104</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Coimbatore, Tamil Nadu, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3>Contact Me Directly</h3>
+          <p>Send a message and it will be forwarded straight to my Gmail inbox.</p>
+          <form class="contact-form" id="contact-form">
+            
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email Address" class="contact-input" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your Message..." class="contact-input contact-textarea" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit-email">
+              Send Email
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          © <span id="current-year">2026</span> Anandamirtharaj D. All Rights Reserved.
+        </div>
+
+        <div class="social-links">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/anandamirtharaj" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/anandamirtharaj" target="_blank" class="social-icon" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <!-- LeetCode (Represented by a code/terminal icon) -->
+          <a href="https://leetcode.com/anandamirtharaj" target="_blank" class="social-icon" aria-label="LeetCode">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Toasts -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Floating WhatsApp Contact Button -->
+  <div class="whatsapp-btn-container" id="whatsapp-widget">
+    <a href="https://wa.me/919003760104" target="_blank" class="whatsapp-toggle" aria-label="Chat on WhatsApp">
+      <div class="pulse-ring"></div>
+      <svg class="whatsapp-icon" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.709 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
