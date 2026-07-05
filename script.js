@@ -250,15 +250,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let containerWidth = graphContainer.clientWidth;
     let containerHeight = graphContainer.clientHeight;
     
-    const nodeRadius = 65; // half of 130px node width/height
+    // Dynamically retrieve node radius based on CSS layout (fallback to 65)
+    const getNodeRadius = () => {
+      if (nodes.length > 0) {
+        const offsetW = nodes[0].offsetWidth;
+        if (offsetW > 0) return offsetW / 2;
+      }
+      return 65;
+    };
+    
+    let currentRadius = getNodeRadius();
+    let radiusInitialized = false;
+
     const nodeState = nodes.map((nodeEl, idx) => {
-      // Grid positioning layout for initial spacing
-      const cols = 4;
+      // Grid positioning layout for initial spacing based on viewport width
+      const cols = containerWidth > 768 ? 4 : (containerWidth > 480 ? 3 : 2);
       const r = idx % cols;
       const c = Math.floor(idx / cols);
       
-      const x = nodeRadius + r * ((containerWidth - 2 * nodeRadius) / (cols - 1 || 1)) + (Math.random() - 0.5) * 15;
-      const y = nodeRadius + c * ((containerHeight - 2 * nodeRadius) / 2) + (Math.random() - 0.5) * 15;
+      const x = currentRadius + r * ((containerWidth - 2 * currentRadius) / (cols - 1 || 1)) + (Math.random() - 0.5) * 15;
+      const y = currentRadius + c * ((containerHeight - 2 * currentRadius) / 2) + (Math.random() - 0.5) * 15;
 
       return {
         element: nodeEl,
@@ -266,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         y: y,
         vx: (Math.random() - 0.5) * 1.6,
         vy: (Math.random() - 0.5) * 1.6,
-        radius: nodeRadius,
+        radius: currentRadius,
         mass: 1,
         isDragging: false
       };
@@ -280,6 +291,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
       containerWidth = graphContainer.clientWidth;
       containerHeight = graphContainer.clientHeight;
+      currentRadius = getNodeRadius();
+      nodeState.forEach(node => {
+        node.radius = currentRadius;
+        // Clamp bounds immediately to prevent flying off screen
+        node.x = Math.max(node.radius, Math.min(containerWidth - node.radius, node.x));
+        node.y = Math.max(node.radius, Math.min(containerHeight - node.radius, node.y));
+      });
     });
 
     // Touch and mouse handlers
@@ -417,6 +435,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animation execution loops
     function updatePhysics() {
+      // Lazy initialize computed radius once elements are fully rendered/measured
+      if (!radiusInitialized && nodes.length > 0) {
+        const measuredRadius = getNodeRadius();
+        if (measuredRadius !== 65 || nodes[0].offsetWidth > 0) {
+          currentRadius = measuredRadius;
+          nodeState.forEach(node => {
+            node.radius = currentRadius;
+          });
+          radiusInitialized = true;
+        }
+      }
+
       nodeState.forEach(node => {
         if (node.isDragging) return;
 
