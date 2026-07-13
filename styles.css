@@ -1585,6 +1585,79 @@ section {
 }
 
 /* ==========================================================================
+   AI Voice Assistant Live Theme Animation
+   ========================================================================== */
+.voice-theme-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-theme-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: pulse-voice-img 4s infinite ease-in-out alternate;
+}
+
+.voice-theme-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+}
+
+@keyframes pulse-voice-img {
+  0% { transform: scale(1); filter: hue-rotate(0deg) brightness(1); }
+  100% { transform: scale(1.15); filter: hue-rotate(20deg) brightness(1.2); }
+}
+
+/* ==========================================================================
+   ERP Leetcode Tracker Live Theme Animation
+   ========================================================================== */
+.code-theme-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-theme-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: pan-code-img 12s infinite alternate ease-in-out;
+}
+
+.code-theme-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
+
+@keyframes pan-code-img {
+  0% { transform: scale(1.05) translate(0, 0); filter: brightness(0.9); }
+  50% { transform: scale(1.15) translate(-1.5%, 1.5%); filter: brightness(1.1); }
+  100% { transform: scale(1.05) translate(1.5%, -1.5%); filter: brightness(0.9); }
+}
+
+/* ==========================================================================
    Structured CSS Mobile-First Media Queries
    ========================================================================== */
 
