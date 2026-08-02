@@ -1847,15 +1847,33 @@ section {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%);
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.finguard-rag-icon {
-  font-size: 3.5rem;
-  animation: pulse-voice-img 4s infinite alternate ease-in-out;
+.finguard-theme-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: pan-finguard-img 12s infinite alternate ease-in-out;
+}
+
+.finguard-theme-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
+
+@keyframes pan-finguard-img {
+  0% { transform: scale(1.05) translate(0, 0); filter: brightness(0.95); }
+  50% { transform: scale(1.15) translate(1.5%, -1.5%); filter: brightness(1.1); }
+  100% { transform: scale(1.05) translate(-1.5%, 1.5%); filter: brightness(0.95); }
 }
 
 .footer-tagline {
