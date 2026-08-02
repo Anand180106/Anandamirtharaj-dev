@@ -1840,6 +1840,35 @@ section {
 }
 
 /* ==========================================================================
+   FinGuard RAG Live Theme & Footer Tagline Styles
+   ========================================================================== */
+.finguard-theme-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finguard-rag-icon {
+  font-size: 3.5rem;
+  animation: pulse-voice-img 4s infinite alternate ease-in-out;
+}
+
+.footer-tagline {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
    Structured CSS Mobile-First Media Queries
    ========================================================================== */
 
