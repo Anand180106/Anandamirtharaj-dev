@@ -550,5 +550,103 @@ document.addEventListener('DOMContentLoaded', () => {
     typeSubtitle();
   }
 
+  /* --------------------------------------------------------------------------
+     8. Certificate Lightbox Modal Feature
+     -------------------------------------------------------------------------- */
+  const certCards = document.querySelectorAll('.cert-card-interactive');
+  const certModal = document.getElementById('cert-modal');
+  const certModalOverlay = document.getElementById('cert-modal-overlay');
+  const certModalClose = document.getElementById('cert-modal-close');
+  const modalCertTitle = document.getElementById('modal-cert-title');
+  const modalCertIssuer = document.getElementById('modal-cert-issuer');
+  const modalCertImgWrapper = document.getElementById('cert-modal-img-wrapper');
+  const modalCertImg = document.getElementById('modal-cert-img');
+  const modalCertFallback = document.getElementById('cert-modal-fallback');
+  const modalFallbackText = document.getElementById('modal-fallback-text');
+  const modalCertPdfLink = document.getElementById('modal-cert-pdf-link');
+  const modalCertVerifyLink = document.getElementById('modal-cert-verify-link');
+
+  function openCertModal(card) {
+    if (!certModal) return;
+
+    const title = card.getAttribute('data-cert-title') || 'Certification';
+    const issuer = card.getAttribute('data-cert-issuer') || '';
+    const imgUrl = card.getAttribute('data-cert-img');
+    const pdfUrl = card.getAttribute('data-cert-pdf');
+    const verifyUrl = card.getAttribute('data-cert-verify');
+    const details = card.getAttribute('data-cert-details');
+
+    if (modalCertTitle) modalCertTitle.textContent = title;
+    if (modalCertIssuer) modalCertIssuer.textContent = issuer;
+
+    if (imgUrl) {
+      if (modalCertImg) modalCertImg.src = imgUrl;
+      if (modalCertImgWrapper) modalCertImgWrapper.style.display = 'flex';
+      if (modalCertFallback) modalCertFallback.style.display = 'none';
+    } else {
+      if (modalCertImgWrapper) modalCertImgWrapper.style.display = 'none';
+      if (modalCertFallback) modalCertFallback.style.display = 'block';
+      if (modalFallbackText) {
+        modalFallbackText.textContent = details || `Official credential certification proof for ${title} issued by ${issuer}.`;
+      }
+    }
+
+    if (pdfUrl) {
+      if (modalCertPdfLink) {
+        modalCertPdfLink.href = pdfUrl;
+        modalCertPdfLink.style.display = 'inline-flex';
+      }
+    } else {
+      if (modalCertPdfLink) modalCertPdfLink.style.display = 'none';
+    }
+
+    if (verifyUrl) {
+      if (modalCertVerifyLink) {
+        modalCertVerifyLink.href = verifyUrl;
+        modalCertVerifyLink.style.display = 'inline-flex';
+      }
+    } else {
+      if (modalCertVerifyLink) modalCertVerifyLink.style.display = 'none';
+    }
+
+    certModal.classList.add('active');
+    certModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCertModal() {
+    if (!certModal) return;
+    certModal.classList.remove('active');
+    certModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  certCards.forEach(card => {
+    card.addEventListener('click', () => openCertModal(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openCertModal(card);
+      }
+    });
+  });
+
+  if (modalCertImg) {
+    modalCertImg.addEventListener('click', () => {
+      if (modalCertImg.src) {
+        window.open(modalCertImg.src, '_blank');
+      }
+    });
+  }
+
+  if (certModalClose) certModalClose.addEventListener('click', closeCertModal);
+  if (certModalOverlay) certModalOverlay.addEventListener('click', closeCertModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal && certModal.classList.contains('active')) {
+      closeCertModal();
+    }
+  });
+
 });
 

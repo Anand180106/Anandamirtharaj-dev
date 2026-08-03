@@ -70,7 +70,7 @@
   <section class="hero" id="home">
     <div class="container hero-wrapper">
       <div class="hero-content">
-        <span class="hero-greeting">👋 Welcome to my portfolio</span>
+        <span class="hero-greeting">Welcome to my space</span>
         <h1 class="hero-title">Hello, I'm <br><span>Anandamirtharaj D</span></h1>
         <div class="hero-subtitle">
           I'm a <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
@@ -201,13 +201,16 @@
             
             <div class="about-bio-paragraphs">
               <p>
-                I am a Computer Science & Engineering student based in Coimbatore, specialized in building full-stack web applications, SaaS architectures, enterprise ERP workflows, and AI-powered engines.
+                I am a Computer Science & Engineering student based in Coimbatore, specialized in building full-stack web applications, SaaS architectures, enterprise ERP workflows, and AI-powered software solutions.
               </p>
               <p>
-                My technical capabilities include integrating Generative AI systems, prompt engineering, setting up cloud pipelines, and building robust relational/non-relational database ecosystems.
+                My technical capabilities include integrating Generative AI systems, prompt engineering, designing scalable backend architectures, setting up cloud deployment pipelines, and building robust SQL and NoSQL database ecosystems.
               </p>
               <p>
-                My goal is to leverage cutting-edge software engineering to build scalable, high-performance systems with clean, maintainable code.
+                I enjoy transforming real-world problems into practical digital solutions by combining software engineering principles with modern AI technologies. From concept to deployment, I focus on creating applications that are scalable, secure, intuitive, and optimized for performance.
+              </p>
+              <p>
+                Alongside development, I continuously explore backend engineering, system design, REST APIs, authentication, cloud technologies, and modern development workflows to strengthen my ability to build production-ready software.
               </p>
             </div>
 
@@ -259,7 +262,7 @@
             <h3 class="column-title">🏆 Certifications</h3>
             <div class="cert-list-simple">
               <!-- SAP BTP -->
-              <div class="cert-card-simple">
+              <div class="cert-card-simple cert-card-interactive" tabindex="0" role="button" aria-label="View Discovering SAP Business Technology Platform Certificate Proof" data-cert-title="Discovering SAP Business Technology Platform" data-cert-issuer="SAP Learning" data-cert-date="July 16, 2026" data-cert-img="assets/sap_btp_certificate.png?v=1" data-cert-pdf="assets/sap_btp_certificate.pdf" data-cert-verify="https://badger.learning.sap.com/verify/xifah-sysan-vypig-vibab-puren">
                 <div class="cert-card-simple-icon">
                   <img src="assets/sap_logo.png" alt="SAP Logo" class="cert-sap-logo">
                 </div>
@@ -267,9 +270,16 @@
                   <h4>SAP BTP</h4>
                   <p>SAP Business Technology Platform</p>
                 </div>
+                <div class="cert-card-action" title="View Certificate Proof">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span class="cert-view-tag">View Proof</span>
+                </div>
               </div>
               <!-- SAP AI Native -->
-              <div class="cert-card-simple">
+              <div class="cert-card-simple cert-card-interactive" tabindex="0" role="button" aria-label="View Implementing AI-Native Enterprise Certificate Proof" data-cert-title="Implementing AI-Native Enterprise" data-cert-issuer="SAP Learning" data-cert-date="July 27, 2026" data-cert-img="assets/sap_ai_native_certificate.png?v=1" data-cert-pdf="assets/sap_ai_native_certificate.pdf" data-cert-verify="https://badger.learning.sap.com/verify/xyfum-hafyd-vicuh-hakym-subuk">
                 <div class="cert-card-simple-icon">
                   <img src="assets/sap_logo.png" alt="SAP Logo" class="cert-sap-logo">
                 </div>
@@ -277,15 +287,29 @@
                   <h4>SAP AI Native</h4>
                   <p>SAP AI Native Developer</p>
                 </div>
+                <div class="cert-card-action" title="View Certificate Proof">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span class="cert-view-tag">View Proof</span>
+                </div>
               </div>
               <!-- Java for Beginners (Infosys) -->
-              <div class="cert-card-simple">
+              <div class="cert-card-simple cert-card-interactive" tabindex="0" role="button" aria-label="View Java for Beginners Certificate Proof" data-cert-title="Java for Beginners" data-cert-issuer="Infosys Springboard" data-cert-date="June 13, 2025" data-cert-img="assets/java_certificate.png?v=2" data-cert-pdf="assets/java_certificate.pdf" data-cert-verify="https://verify.onwingspan.com">
                 <div class="cert-card-simple-icon">
                   <img src="assets/java_logo.png" alt="Java Logo" class="cert-sap-logo">
                 </div>
                 <div class="cert-card-simple-content">
                   <h4>Java for Beginners</h4>
                   <p>Infosys Springboard</p>
+                </div>
+                <div class="cert-card-action" title="View Certificate Proof">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span class="cert-view-tag">View Proof</span>
                 </div>
               </div>
             </div>
@@ -547,8 +571,55 @@
     </a>
   </div>
 
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Certificate Proof Modal Lightbox -->
+  <div class="cert-modal" id="cert-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-cert-title">
+    <div class="cert-modal-overlay" id="cert-modal-overlay"></div>
+    <div class="cert-modal-container">
+      <div class="cert-modal-header">
+        <div class="cert-modal-header-info">
+          <span class="cert-modal-badge">🎓 Certificate Proof</span>
+          <h3 id="modal-cert-title" class="cert-modal-title">Java for Beginners</h3>
+          <p id="modal-cert-issuer" class="cert-modal-issuer">Infosys Springboard</p>
+        </div>
+        <button class="cert-modal-close" id="cert-modal-close" aria-label="Close certificate modal">&times;</button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-modal-img-wrapper" id="cert-modal-img-wrapper">
+          <img id="modal-cert-img" src="" alt="Certificate Proof Image" class="cert-modal-img">
+        </div>
+        <div class="cert-modal-fallback" id="cert-modal-fallback" style="display: none;">
+          <div class="fallback-icon-box">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h4>Verified Credential</h4>
+          <p id="modal-fallback-text">Official credential certification for Anandamirtharaj D.</p>
+        </div>
+      </div>
+
+      <div class="cert-modal-footer">
+        <a id="modal-cert-pdf-link" href="" target="_blank" class="btn btn-secondary btn-modal-action" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          View / Download PDF
+        </a>
+        <a id="modal-cert-verify-link" href="" target="_blank" class="btn btn-primary btn-modal-action">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          Verify Certificate
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
