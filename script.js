@@ -587,7 +587,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (modalCertImgWrapper) modalCertImgWrapper.style.display = 'none';
       if (modalCertFallback) modalCertFallback.style.display = 'block';
       if (modalFallbackText) {
-        modalFallbackText.textContent = details || `Official credential certification proof for ${title} issued by ${issuer}.`;
+        modalFallbackText.textContent = details || `Official credential certification for ${title} issued by ${issuer}.`;
       }
     }
 
