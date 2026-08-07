@@ -171,26 +171,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = formData.get('email');
       const message = formData.get('message');
 
-      // Check if EmailJS is properly configured
-      if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+      // Check if EmailJS is properly loaded & configured
+      if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
         showToast('📨 Sending message...');
         
-        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm, EMAILJS_PUBLIC_KEY)
-          .then(() => {
-            showToast('🚀 Message sent successfully!', 'success');
-            contactForm.reset();
-          })
-          .catch((error) => {
-            console.error('EmailJS Error:', error);
-            const errorText = error?.text || error?.message || 'Check credentials';
-            showToast(`⚠️ Send failed: ${errorText}`, 'default');
-            // Slight delay before opening fallback to let user read the error
-            setTimeout(() => {
-              triggerMailtoFallback(name, email, message);
-            }, 2000);
-          });
+        try {
+          emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm, EMAILJS_PUBLIC_KEY)
+            .then(() => {
+              showToast('🚀 Message sent successfully!', 'success');
+              contactForm.reset();
+            })
+            .catch((error) => {
+              console.error('EmailJS Error:', error);
+              const errorText = error?.text || error?.message || (typeof error === 'string' ? error : 'Check dashboard credentials');
+              showToast(`⚠️ Send failed: ${errorText}`, 'default');
+              setTimeout(() => {
+                triggerMailtoFallback(name, email, message);
+              }, 2500);
+            });
+        } catch (err) {
+          console.error('EmailJS Execution Error:', err);
+          showToast(`⚠️ Send failed: ${err.message || 'EmailJS error'}`, 'default');
+          setTimeout(() => {
+            triggerMailtoFallback(name, email, message);
+          }, 2500);
+        }
       } else {
-        // Fallback to mailto link immediately
+        // Fallback to mailto link immediately if emailjs is not loaded or key missing
         showToast('✉️ Opening email client...');
         triggerMailtoFallback(name, email, message);
         contactForm.reset();
@@ -199,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function triggerMailtoFallback(name, email, message) {
-    const emailRecipient = 'anand180106@gmail.com';
+    const emailRecipient = 'hello.anandamirtharaj@gmail.com';
     const subject = encodeURIComponent('New Contact Message from Portfolio');
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     window.location.href = `mailto:${emailRecipient}?subject=${subject}&body=${body}`;
