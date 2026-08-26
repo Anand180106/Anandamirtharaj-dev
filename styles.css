@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* CSS Custom Variables for Theme Control */
 :root {
@@ -29,8 +29,9 @@
   --hover-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.12), 0 0 0 1px rgba(99, 102, 241, 0.05);
   --floating-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
   
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2315,4 +2316,35 @@ section {
   .cert-modal-img {
     max-height: calc(80vh - 160px);
   }
+}
+
+/* ==========================================================================
+   Typography System: Inter (primary) + JetBrains Mono (technical)
+   ========================================================================== */
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'calt';
+}
+
+/* Technical / developer-oriented text */
+.section-tag,
+.project-tech-badge,
+.skill-node-subtext,
+.cert-modal-badge,
+.cert-view-tag,
+.badge-tech,
+.badge-leet,
+.badge-cgpa,
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+code, pre, samp {
+  font-weight: 400;
 }
