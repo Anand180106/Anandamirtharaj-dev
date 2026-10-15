@@ -20,53 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  /* --------------------------------------------------------------------------
-     1. ATS & Recruiter-Friendly Mode Controller
-     -------------------------------------------------------------------------- */
-  const atsToggleBtn = document.getElementById('ats-toggle-btn');
-  const atsStatusBadge = document.getElementById('ats-status-badge');
-  const savedAtsMode = localStorage.getItem('portfolio_ats_mode');
-
-  function setAtsMode(enabled, showNotification = false) {
-    if (enabled) {
-      document.body.classList.add('ats-mode-active');
-      if (atsStatusBadge) atsStatusBadge.textContent = 'ON';
-      localStorage.setItem('portfolio_ats_mode', 'true');
-      if (showNotification) {
-        showToast('⚡ ATS & Recruiter Mode Active! (98% Compatibility)', 'success');
-      }
-    } else {
-      document.body.classList.remove('ats-mode-active');
-      if (atsStatusBadge) atsStatusBadge.textContent = 'OFF';
-      localStorage.setItem('portfolio_ats_mode', 'false');
-      if (showNotification) {
-        showToast('💼 Standard Visual Mode Active', 'default');
-      }
-    }
-  }
-
-  // Initialize saved state (default is standard view)
-  if (savedAtsMode === 'true') {
-    setAtsMode(true, false);
-  } else {
-    setAtsMode(false, false);
-  }
-
-  if (atsToggleBtn) {
-    atsToggleBtn.addEventListener('click', () => {
-      const isCurrentlyAts = document.body.classList.contains('ats-mode-active');
-      setAtsMode(!isCurrentlyAts, true);
-    });
-  }
-
-  // Keyboard shortcut: Alt + A to toggle ATS Mode
-  document.addEventListener('keydown', (e) => {
-    if (e.altKey && (e.key === 'a' || e.key === 'A')) {
-      e.preventDefault();
-      const isCurrentlyAts = document.body.classList.contains('ats-mode-active');
-      setAtsMode(!isCurrentlyAts, true);
-    }
-  });
+  // Ensure ATS mode is cleared
+  localStorage.removeItem('portfolio_ats_mode');
+  document.body.classList.remove('ats-mode-active');
 
   /* --------------------------------------------------------------------------
      2. Header Scroll Styling
@@ -669,98 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* --------------------------------------------------------------------------
-     9. ATS Plaintext Resume Modal & Clipboard Logic
-     -------------------------------------------------------------------------- */
-  const atsModal = document.getElementById('ats-resume-modal');
-  const btnCopyAts = document.getElementById('btn-copy-ats');
-  const btnViewAtsModal = document.getElementById('btn-view-ats-modal');
-  const atsModalClose = document.getElementById('ats-modal-close');
-  const btnCloseAtsModal = document.getElementById('btn-close-ats-modal');
-  const btnCopyModalText = document.getElementById('btn-copy-modal-text');
-  const atsPlaintextContent = document.getElementById('ats-plaintext-content');
 
-  function getAtsResumeText() {
-    if (atsPlaintextContent) {
-      return atsPlaintextContent.textContent.trim();
-    }
-    return '';
-  }
-
-  function copyAtsResume() {
-    const text = getAtsResumeText();
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast('📋 ATS Resume copied to clipboard!', 'success');
-      }).catch(err => {
-        fallbackCopyText(text);
-      });
-    } else {
-      fallbackCopyText(text);
-    }
-  }
-
-  function fallbackCopyText(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed';
-    textArea.style.left = '-999999px';
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    try {
-      document.execCommand('copy');
-      showToast('📋 ATS Resume copied to clipboard!', 'success');
-    } catch (err) {
-      showToast('⚠️ Could not copy automatically. Please select text manually.');
-    }
-    document.body.removeChild(textArea);
-  }
-
-  function openAtsModal() {
-    if (!atsModal) return;
-    atsModal.classList.add('active');
-    atsModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeAtsModal() {
-    if (!atsModal) return;
-    atsModal.classList.remove('active');
-    atsModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  if (btnCopyAts) {
-    btnCopyAts.addEventListener('click', copyAtsResume);
-  }
-
-  if (btnCopyModalText) {
-    btnCopyModalText.addEventListener('click', copyAtsResume);
-  }
-
-  if (btnViewAtsModal) {
-    btnViewAtsModal.addEventListener('click', openAtsModal);
-  }
-
-  if (atsModalClose) {
-    atsModalClose.addEventListener('click', closeAtsModal);
-  }
-
-  if (btnCloseAtsModal) {
-    btnCloseAtsModal.addEventListener('click', closeAtsModal);
-  }
-
-  const atsModalOverlay = atsModal ? atsModal.querySelector('.ats-modal-overlay') : null;
-  if (atsModalOverlay) {
-    atsModalOverlay.addEventListener('click', closeAtsModal);
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && atsModal && atsModal.classList.contains('active')) {
-      closeAtsModal();
-    }
-  });
 
 });
 

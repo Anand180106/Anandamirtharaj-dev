@@ -29,11 +29,6 @@
       </ul>
 
       <div class="nav-actions">
-        <!-- ATS Mode Round Toggle Button -->
-        <button class="ats-toggle-btn" id="ats-toggle-btn" aria-label="Toggle ATS Mode" title="Toggle ATS / Recruiter Mode (Alt+A)">
-          <span class="ats-toggle-text">ATS</span>
-        </button>
-
         <a href="#contact" class="btn btn-primary nav-talk-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -98,44 +93,9 @@
           </a>
         </div>
 
-        <!-- ATS Candidate Scorecard (Visible in ATS Mode) -->
-        <div class="ats-candidate-card ats-only">
-          <div class="ats-card-header">
-            <div class="ats-card-title">
-              <span>📋 Candidate Summary & Recruiter Data</span>
-            </div>
-            <span class="ats-verified-chip">✓ Verified Credentials</span>
-          </div>
-          <div class="ats-grid-specs">
-            <div class="ats-spec-item">
-              <span class="ats-spec-label">Target Roles</span>
-              <span class="ats-spec-val highlight">Software Dev Engineer / AI / Cloud</span>
-            </div>
-            <div class="ats-spec-item">
-              <span class="ats-spec-label">Education</span>
-              <span class="ats-spec-val">B.E. CSE (2023 - 2027) • CGPA: 8.38</span>
-            </div>
-            <div class="ats-spec-item">
-              <span class="ats-spec-label">Primary Stack</span>
-              <span class="ats-spec-val highlight">Java, React, Node.js, SQL, REST APIs, SAP BTP</span>
-            </div>
-            <div class="ats-spec-item">
-              <span class="ats-spec-label">Problem Solving</span>
-              <span class="ats-spec-val highlight">Active Coding Streak • Verified Profiles</span>
-            </div>
-            <div class="ats-spec-item">
-              <span class="ats-spec-label">Work Availability</span>
-              <span class="ats-spec-val highlight">Open to Internships & Full-Time</span>
-            </div>
-            <div class="ats-spec-item">
-              <span class="ats-spec-label">Location / Relocation</span>
-              <span class="ats-spec-val">Coimbatore, India (Open to Relocate / Remote)</span>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <!-- Right Column: Hero Visual Photo + Parallel ATS Heatmaps -->
+      <!-- Right Column: Hero Visual Photo -->
       <div class="hero-visual">
         <!-- Glowing Background Radial Aura -->
         <div class="avatar-blob-bg"></div>
@@ -210,53 +170,6 @@
           </div>
         </div>
 
-        <!-- Live Activity & Progress Heatmaps (Parallel to Candidate Summary) -->
-        <div class="ats-heatmaps-section ats-only">
-          <div class="ats-heatmaps-header">
-            <span class="ats-heatmaps-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); margin-right: 4px;">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-              Verified Coding Activity & Progress
-            </span>
-            <div class="ats-heatmap-links">
-              <a href="https://leetcode.com/anandamirtharaj" target="_blank" rel="noopener noreferrer" class="ats-link-pill">LeetCode ↗</a>
-              <a href="https://github.com/Anand180106" target="_blank" rel="noopener noreferrer" class="ats-link-pill">GitHub ↗</a>
-            </div>
-          </div>
-
-          <div class="ats-heatmaps-grid">
-            <!-- LeetCode Heatmap with Real Count -->
-            <div class="ats-heatmap-card">
-              <div class="ats-card-subhead">
-                <div class="ats-subhead-left">
-                  <span class="ats-source-badge leet">LeetCode Activity</span>
-                  <span class="ats-stat-highlight">300 Submissions</span>
-                </div>
-                <div class="ats-subhead-metrics">
-                  <span>Active: <strong>82 Days</strong></span> • <span>Streak: <strong>10</strong></span>
-                </div>
-              </div>
-              <a href="https://leetcode.com/anandamirtharaj" target="_blank" rel="noopener noreferrer" class="ats-graph-link" title="Click to view Anandamirtharaj on LeetCode">
-                <img src="assets/leetcode_heatmap.png" alt="300 submissions on LeetCode - 82 active days, 10 max streak" class="ats-embed-img ats-pixel-crisp" loading="lazy">
-              </a>
-            </div>
-
-            <!-- GitHub Contributions Heatmap -->
-            <div class="ats-heatmap-card">
-              <div class="ats-card-subhead">
-                <div class="ats-subhead-left">
-                  <span class="ats-source-badge git">GitHub Contributions</span>
-                  <span class="ats-stat-highlight">@Anand180106</span>
-                </div>
-                <a href="https://github.com/Anand180106" target="_blank" rel="noopener noreferrer" class="ats-verified-link">Verify on GitHub ↗</a>
-              </div>
-              <a href="https://github.com/Anand180106" target="_blank" rel="noopener noreferrer" class="ats-graph-link" title="Click to view Anand180106 on GitHub">
-                <img src="assets/github_heatmap.svg" alt="Anand180106 GitHub Contributions Heatmap" class="ats-embed-img ats-gh-svg" loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -332,100 +245,6 @@
         </div>
       </div>
 
-      <!-- ATS Skills Taxonomy Matrix (Visible in ATS Mode) -->
-      <div class="ats-taxonomy-matrix ats-only">
-        <div class="ats-taxonomy-card">
-          <div class="ats-tax-header">
-            <span class="ats-tax-icon">💻</span>
-            <span class="ats-tax-title">Languages & Core</span>
-          </div>
-          <div class="ats-tags-cloud">
-            <span class="ats-tag core">Java (Advanced)</span>
-            <span class="ats-tag core">JDBC API</span>
-            <span class="ats-tag core">JavaScript (ES6+)</span>
-            <span class="ats-tag core">TypeScript</span>
-            <span class="ats-tag core">SQL</span>
-            <span class="ats-tag">HTML5 / CSS3</span>
-          </div>
-        </div>
-
-        <div class="ats-taxonomy-card">
-          <div class="ats-tax-header">
-            <span class="ats-tax-icon">🤖</span>
-            <span class="ats-tax-title">AI & Intelligent Systems</span>
-          </div>
-          <div class="ats-tags-cloud">
-            <span class="ats-tag core">Generative AI</span>
-            <span class="ats-tag core">RAG Architectures</span>
-            <span class="ats-tag core">LangChain</span>
-            <span class="ats-tag core">Prompt Engineering</span>
-            <span class="ats-tag">GROQ LLM API</span>
-            <span class="ats-tag">Deepgram STT</span>
-            <span class="ats-tag">Streamlit</span>
-          </div>
-        </div>
-
-        <div class="ats-taxonomy-card">
-          <div class="ats-tax-header">
-            <span class="ats-tax-icon">🌐</span>
-            <span class="ats-tax-title">Frameworks & Web</span>
-          </div>
-          <div class="ats-tags-cloud">
-            <span class="ats-tag core">React.js</span>
-            <span class="ats-tag core">Node.js</span>
-            <span class="ats-tag core">REST APIs</span>
-            <span class="ats-tag">Express.js</span>
-            <span class="ats-tag">TailwindCSS</span>
-            <span class="ats-tag">Vite</span>
-          </div>
-        </div>
-
-        <div class="ats-taxonomy-card">
-          <div class="ats-tax-header">
-            <span class="ats-tax-icon">☁️</span>
-            <span class="ats-tax-title">Cloud & Deployment</span>
-          </div>
-          <div class="ats-tags-cloud">
-            <span class="ats-tag core">SAP BTP</span>
-            <span class="ats-tag core">Google Cloud Platform</span>
-            <span class="ats-tag core">Vercel</span>
-            <span class="ats-tag core">Render</span>
-            <span class="ats-tag">Netlify</span>
-            <span class="ats-tag">SAP ERP ECC/S4</span>
-            <span class="ats-tag">CI/CD Pipelines</span>
-          </div>
-        </div>
-
-        <div class="ats-taxonomy-card">
-          <div class="ats-tax-header">
-            <span class="ats-tax-icon">🗄️</span>
-            <span class="ats-tax-title">Databases & Storage</span>
-          </div>
-          <div class="ats-tags-cloud">
-            <span class="ats-tag core">PostgreSQL</span>
-            <span class="ats-tag core">Supabase</span>
-            <span class="ats-tag core">MySQL</span>
-            <span class="ats-tag">MongoDB</span>
-            <span class="ats-tag">Vector Embeddings</span>
-            <span class="ats-tag">Relational Modeling</span>
-          </div>
-        </div>
-
-        <div class="ats-taxonomy-card">
-          <div class="ats-tax-header">
-            <span class="ats-tax-icon">🛠️</span>
-            <span class="ats-tax-title">Tools & Methodologies</span>
-          </div>
-          <div class="ats-tags-cloud">
-            <span class="ats-tag core">Git / GitHub</span>
-            <span class="ats-tag core">REST API Design</span>
-            <span class="ats-tag core">SDLC</span>
-            <span class="ats-tag core">DSA & Problem Solving</span>
-            <span class="ats-tag">Postman</span>
-            <span class="ats-tag">Vulnerability Assessment</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -562,9 +381,14 @@
         <!-- Experience 1 -->
         <div class="experience-item-simple">
           <div class="exp-header">
-            <div>
-              <h3>Application Developer</h3>
-              <div class="exp-company">Caelius Consulting Inc. &bull; <span style="font-weight: 500; opacity: 0.85;">Full-time</span></div>
+            <div class="exp-title-meta">
+              <div class="exp-company-logo">
+                <img src="assets/caelius_logo.png" alt="Caelius Consulting Inc. Logo">
+              </div>
+              <div>
+                <h3>Application Developer</h3>
+                <div class="exp-company">Caelius Consulting Inc.</div>
+              </div>
             </div>
             <span class="exp-date">September 1 – Present</span>
           </div>
@@ -577,9 +401,14 @@
         <!-- Internship 1 -->
         <div class="experience-item-simple">
           <div class="exp-header">
-            <div>
-              <h3>Support & Test Engineering Intern</h3>
-              <div class="exp-company">Roots Industries India Pvt Ltd.</div>
+            <div class="exp-title-meta">
+              <div class="exp-company-logo">
+                <img src="assets/roots_logo.png?v=3" alt="Roots Industries India Pvt Ltd. Logo">
+              </div>
+              <div>
+                <h3>Support & Test Engineering Intern</h3>
+                <div class="exp-company">Roots Industries India Pvt Ltd.</div>
+              </div>
             </div>
             <span class="exp-date">Jun 2025 – Jul 2025</span>
           </div>
@@ -593,9 +422,14 @@
         <!-- Internship 2 -->
         <div class="experience-item-simple">
           <div class="exp-header">
-            <div>
-              <h3>Cyber Threat Analysis Intern</h3>
-              <div class="exp-company">Prompt Infotech</div>
+            <div class="exp-title-meta">
+              <div class="exp-company-logo">
+                <img src="assets/prompt_logo.png?v=3" alt="Prompt Infotech Logo">
+              </div>
+              <div>
+                <h3>Cyber Threat Analysis Intern</h3>
+                <div class="exp-company">Prompt Infotech</div>
+              </div>
             </div>
             <span class="exp-date">Aug 2024</span>
           </div>
@@ -635,13 +469,6 @@
             <h3>AI Resume Analyzer</h3>
             <p>Developed a web application to analyze resumes and generate structured feedback. Implemented resume parsing and evaluation for skills, content quality, and basic formatting, displaying actionable improvement suggestions.</p>
             
-            <!-- ATS Spec Sheet -->
-            <div class="ats-project-meta ats-only">
-              <div class="ats-meta-row"><span class="ats-meta-title">Stack:</span> <span class="ats-meta-val">React, Node.js, OCR Parser, Netlify</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Architecture:</span> <span class="ats-meta-val">Client-Server REST pipeline with real-time feedback scoring</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Impact:</span> <span class="ats-meta-val">Parses multi-section resumes with instant ATS keyword gap analysis</span></div>
-            </div>
-
             <div class="portfolio-links">
                <a href="https://anand-ai.netlify.app/" target="_blank" class="portfolio-link-btn">Launch Live App <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                <a href="https://github.com/Anand180106/AI-Resume-Analyzer" target="_blank" class="portfolio-link-btn">GitHub Repo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
@@ -662,13 +489,6 @@
             <h3>AI Voice Assistant</h3>
             <p>Architected and Integrated GROQ LLM and Deepgram APIs for low-latency speech processing. Engineered web research features utilizing Gemini API and Tavily search API, and deployed secure cloud infrastructure via Google Cloud Console.</p>
             
-            <!-- ATS Spec Sheet -->
-            <div class="ats-project-meta ats-only">
-              <div class="ats-meta-row"><span class="ats-meta-title">Stack:</span> <span class="ats-meta-val">Python, GROQ LLM, Deepgram STT, Tavily API, GCP</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Architecture:</span> <span class="ats-meta-val">Streaming audio pipeline with real-time web search grounding</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Impact:</span> <span class="ats-meta-val">Sub-400ms latency voice processing with verified search citations</span></div>
-            </div>
-
             <div class="portfolio-links">
                <a href="https://github.com/Anand180106/AI-Voice-Assistant" target="_blank" class="portfolio-link-btn">GitHub Repo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
             </div>
@@ -688,13 +508,6 @@
             <h3>FinGuard RAG</h3>
             <p>Built a Retrieval-Augmented Generation (RAG) system for financial document intelligence, compliance analysis, and automated insights processing.</p>
             
-            <!-- ATS Spec Sheet -->
-            <div class="ats-project-meta ats-only">
-              <div class="ats-meta-row"><span class="ats-meta-title">Stack:</span> <span class="ats-meta-val">Python, Streamlit, LangChain, Vector DB, Gemini API</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Architecture:</span> <span class="ats-meta-val">Vector embedding chunking with hybrid semantic document retrieval</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Impact:</span> <span class="ats-meta-val">Automates regulatory audit review across complex financial PDFs</span></div>
-            </div>
-
             <div class="portfolio-links">
                <a href="https://finguard-rag.streamlit.app/" target="_blank" class="portfolio-link-btn">Launch Live App <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                <a href="https://github.com/Anand180106/FinGuard-Rag" target="_blank" class="portfolio-link-btn">GitHub Repo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
@@ -715,13 +528,6 @@
             <h3>LeetTrack Enterprise</h3>
             <p>AI-Powered Coding Performance Management Platform. Built and deployed a LeetCode tracker with real-time analytics, AI-assisted authentication workflows, performance insights, and streak tracking on Vercel.</p>
             
-            <!-- ATS Spec Sheet -->
-            <div class="ats-project-meta ats-only">
-              <div class="ats-meta-row"><span class="ats-meta-title">Stack:</span> <span class="ats-meta-val">Next.js, TypeScript, TailwindCSS, Vercel, REST API</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Architecture:</span> <span class="ats-meta-val">Real-time stats polling engine with predictive streak analysis</span></div>
-              <div class="ats-meta-row"><span class="ats-meta-title">Impact:</span> <span class="ats-meta-val">Tracks 250+ algorithm solutions with zero-downtime serverless deployment</span></div>
-            </div>
-
             <div class="portfolio-links">
                <a href="https://leet-track-phi.vercel.app" target="_blank" class="portfolio-link-btn">Launch Live App <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
                <a href="https://github.com/Anand180106/LeetTrack" target="_blank" class="portfolio-link-btn">GitHub Repo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
@@ -896,101 +702,7 @@
     </div>
   </div>
 
-  <!-- ATS Plaintext Resume Modal -->
-  <div class="ats-modal" id="ats-resume-modal" aria-hidden="true" role="dialog" aria-labelledby="ats-modal-title">
-    <div class="ats-modal-overlay" id="ats-modal-overlay"></div>
-    <div class="ats-modal-container">
-      <div class="ats-modal-header">
-        <div class="ats-modal-title">
-          <span>⚡ ATS Formatted Plaintext Resume</span>
-        </div>
-        <button class="ats-modal-close" id="ats-modal-close" aria-label="Close ATS modal">&times;</button>
-      </div>
-      <div class="ats-modal-body">
-        <pre class="ats-plaintext-pre" id="ats-plaintext-content">
-================================================================================
-ANANDAMIRTHARAJ D
-Software Development Engineer | AI & Cloud Systems
-Email: hello.anandamirtharaj@gmail.com | Phone: +91 90037 60104
-Location: Coimbatore, Tamil Nadu, India | Portfolio: https://anandamirtharaj.me/
-LinkedIn: https://www.linkedin.com/in/anandamirtharaj-d/
-GitHub: https://github.com/Anand180106 | LeetCode: https://leetcode.com/anandamirtharaj
-================================================================================
 
-SUMMARY:
-Computer Science & Engineering undergraduate (Graduating 2027) with deep experience
-in Java, JDBC, SQL, REST APIs, Application Development, SAP BTP, and AI/RAG architectures.
-Active problem solver on LeetCode with proven open-source contributions and production-ready
-enterprise and web applications.
-
-EDUCATION:
-- B.E. Computer Science and Engineering (2023 - 2027)
-  V.S.B. College of Engineering Technical Campus | CGPA: 8.38 / 10.0
-- Higher Secondary Education (ISC) (2022 - 2023)
-  Holy Innocents School & Junior College, Ooty | Percentage: 73.75%
-
-TECHNICAL SKILLS:
-- Languages & Core: Java (Core & Advanced), JDBC API, JavaScript (ES6+), TypeScript, SQL, HTML5/CSS3
-- Frameworks & Backend: React.js, Node.js, Express.js, REST APIs, TailwindCSS, Streamlit, LangChain, Vite
-- AI & LLM Systems: Generative AI, LangChain, RAG Systems, Prompt Engineering, GROQ API, Deepgram STT, Gemini API
-- Cloud & Deployment: SAP BTP, Google Cloud Platform (GCP), Vercel, Render, Netlify, SAP ERP, Linux, CI/CD
-- Databases & Storage: PostgreSQL, Supabase, MySQL, MongoDB, Vector Databases, Relational DB Modeling
-- Tools & Practices: Git, GitHub, REST API Design, Postman, SDLC, Vulnerability Assessment
-
-PROFESSIONAL EXPERIENCE:
-1. Caelius Consulting Inc. — Application Developer (Full-time)
-   (September 1 – Present)
-   - Developing robust backend business modules and enterprise services utilizing Java and JDBC, establishing seamless relational database connectivity and structured data access layers.
-   - Writing and optimizing complex SQL queries, procedures, and data models to ensure high-performance transaction processing, data integrity, and low-latency database operations.
-
-2. Roots Industries India Pvt Ltd. — Support & Test Engineering Intern
-   (Jun 2025 – Jul 2025 | Coimbatore, India)
-   - Streamlined enterprise business workflows by analyzing SAP ERP operations and backend processes, reducing manual data entry time by 15% for critical reports.
-   - Automated database handling, report generation, and analytics workflows, reducing manual processing time by 30% across real-time Finance, IT, and Marketing projects.
-   - Collaborated with cross-functional teams to understand business requirements, software workflows, and Software Development Life Cycle (SDLC) practices.
-
-2. Prompt Infotech — Cyber Threat Analysis Intern
-   (Aug 2024 | Coimbatore, India)
-   - Conducted vulnerability assessments and network threat analysis using cybersecurity tools, identifying 20+ potential security risks across systems and network environments.
-   - Analyzed phishing patterns, network threats, and system vulnerabilities, supporting threat detection, risk assessment, and security monitoring activities.
-   - Prepared security assessment reports documenting vulnerabilities, risk levels, and mitigation recommendations, strengthening practical knowledge of network security and vulnerability management.
-
-FEATURED PROJECTS:
-1. AI Resume Analyzer (React, Node.js, Express, OCR Parser, Netlify)
-   - Built a full-stack tool evaluating resume quality, ATS compatibility, and skills matching.
-   - Repo: https://github.com/Anand180106/AI-Resume-Analyzer | Live: https://anand-ai.netlify.app/
-
-2. AI Voice Assistant (Python, GROQ LLM, Deepgram STT, Tavily API, GCP)
-   - Developed a voice agent achieving sub-400ms speech-to-text and AI synthesis latency.
-   - Repo: https://github.com/Anand180106/AI-Voice-Assistant
-
-3. FinGuard RAG (Python, Streamlit, LangChain, Vector Embeddings, Gemini API)
-   - Built a RAG document intelligence system for financial audit and compliance analysis.
-   - Repo: https://github.com/Anand180106/FinGuard-Rag | Live: https://finguard-rag.streamlit.app/
-
-4. LeetTrack Enterprise (Next.js, TypeScript, TailwindCSS, Vercel, REST API)
-   - Deployed a performance analytics dashboard with streak tracking and algorithm insights.
-   - Repo: https://github.com/Anand180106/LeetTrack | Live: https://leet-track-phi.vercel.app
-
-CERTIFICATIONS:
-- Discovering SAP Business Technology Platform (SAP Learning, 2026)
-- Implementing AI-Native Enterprise (SAP Learning, 2026)
-- Java for Beginners (Infosys Springboard, 2025)
-================================================================================
-        </pre>
-      </div>
-      <div class="ats-modal-footer">
-        <button class="btn btn-secondary btn-modal-action" id="btn-copy-modal-text">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          Copy Text to Clipboard
-        </button>
-        <button class="btn btn-primary btn-modal-action" id="btn-close-ats-modal">Close</button>
-      </div>
-    </div>
-  </div>
 
   <!-- EmailJS Browser SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
