@@ -358,8 +358,182 @@ body.ats-mode-active .ats-toggle-btn:hover {
   background-color: var(--surface-muted);
 }
 
-.nav-talk-btn {
+/* Live Availability Status Badge (replacing Hire Me) */
+.nav-actions .availability-badge {
   display: none;
+}
+
+.mobile-availability-item {
+  display: block;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.mobile-availability-item .availability-badge {
+  display: inline-flex;
+  width: auto;
+  margin: 0 auto;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(129, 140, 248, 0.22);
+  border-radius: 12px;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+  max-width: fit-content;
+}
+
+.availability-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(129, 140, 248, 0.55);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 16px rgba(129, 140, 248, 0.25);
+}
+
+.availability-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.status-dot-ring {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(129, 140, 248, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-ring 2.2s infinite ease-out;
+}
+
+.status-dot-core {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #818CF8;
+  box-shadow: 0 0 8px #818CF8;
+  animation: pulse-core 2.2s infinite ease-in-out;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(129, 140, 248, 0.6);
+    border-color: rgba(129, 140, 248, 0.8);
+  }
+  65% {
+    box-shadow: 0 0 0 5px rgba(129, 140, 248, 0);
+    border-color: rgba(129, 140, 248, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(129, 140, 248, 0);
+    border-color: rgba(129, 140, 248, 0.5);
+  }
+}
+
+@keyframes pulse-core {
+  0%, 100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 6px #818CF8;
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px #A5B4FC, 0 0 4px #818CF8;
+  }
+}
+
+.availability-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.availability-label {
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #94A3B8;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.availability-text {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-top: 1px;
+  white-space: nowrap;
+}
+
+.availability-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 0 0.15rem;
+  flex-shrink: 0;
+}
+
+.signal-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 18px;
+  padding-left: 0.15rem;
+  flex-shrink: 0;
+}
+
+.signal-bar {
+  width: 3px;
+  border-radius: 99px;
+  background-color: #818CF8;
+  transform-origin: bottom;
+  opacity: 0.25;
+}
+
+.bar-1 { height: 5px;  animation: signal-wave 1.5s infinite ease-in-out; animation-delay: 0.0s; }
+.bar-2 { height: 8px;  animation: signal-wave 1.5s infinite ease-in-out; animation-delay: 0.16s; }
+.bar-3 { height: 11px; animation: signal-wave 1.5s infinite ease-in-out; animation-delay: 0.32s; }
+.bar-4 { height: 14px; animation: signal-wave 1.5s infinite ease-in-out; animation-delay: 0.48s; }
+.bar-5 { height: 18px; animation: signal-wave 1.5s infinite ease-in-out; animation-delay: 0.64s; }
+
+@keyframes signal-wave {
+  0% {
+    opacity: 0.25;
+    transform: scaleY(0.85);
+    filter: drop-shadow(0 0 0 rgba(129, 140, 248, 0));
+  }
+  22% {
+    opacity: 1;
+    transform: scaleY(1.15);
+    filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.95)) drop-shadow(0 0 3px #A5B4FC);
+  }
+  42% {
+    opacity: 0.55;
+    transform: scaleY(0.95);
+    filter: drop-shadow(0 0 2px rgba(129, 140, 248, 0.4));
+  }
+  60%, 100% {
+    opacity: 0.25;
+    transform: scaleY(0.85);
+    filter: drop-shadow(0 0 0 rgba(129, 140, 248, 0));
+  }
 }
 
 /* Decorative Background SVG Blobs */
@@ -2111,11 +2285,12 @@ body.ats-mode-active .ats-toggle-btn:hover {
     width: auto;
   }
 
-  .nav-talk-btn {
+  .nav-actions .availability-badge {
     display: inline-flex;
-    padding: 0.6rem 1.4rem;
-    font-size: 0.88rem;
-    min-height: auto;
+  }
+
+  .mobile-availability-item {
+    display: none;
   }
 
   .hero-wrapper {
