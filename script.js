@@ -533,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typingTextEl) {
     const roles = [
       "Software Developer",
-      "Full Stack Developer",
+      "Application Developer",
       "AI Enthusiast",
       "ERP Developer",
       "Prompt Engineer"
